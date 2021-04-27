@@ -2075,6 +2075,10 @@ function markup(&$body, $track_cites = false, $op = false) {
 		}
 	}
 
+        if ($config['hex_color_functions']) {
+                preg_replace("/\[hex\=\#?([abcdefABCDEF\d]{3,6})\](.+?)\[\/hex\]/", "<span style=\"color:$1;\">$2</span>", $body);
+        }
+
 	$tracked_cites = array();
 
 	// Cites

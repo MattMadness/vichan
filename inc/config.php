@@ -694,6 +694,9 @@
 	// will significantly impact performance when enabled.
 	$config['always_regenerate_markup'] = false;
 
+        // Allow "hex" color functions, to change the color of text in markup.
+        $config['hex_color_function'] = "false";
+
 /*
  * ====================
  *  Image settings
